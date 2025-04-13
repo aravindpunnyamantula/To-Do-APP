@@ -151,19 +151,30 @@ body{
   opacity: 0;
   transition: opacity 0.5s ease-out;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+@media (max-width: 600px) {
+  .to-do-card {
+    width: 95%;
+    padding: 10px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.fade-in {
-  animation: fadeIn 0.4s ease-out;
+  .grid-inputs {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .add-btn, .delete-btn, .delete-all-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .name-input, .date-input, .time-input {
+    font-size: 16px;
+  }
+
+  .count {
+    font-size: 16px;
+  }
 }
 
 
