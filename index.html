@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do-APP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="to-do-card">
+    
+    <p class="todo-title">To Do List</p>
+    <div class="grid-inputs">
+
+      <input type="text" placeholder="Name" class="js-name-input name-input">
+
+      <input type="date" class="js-duedate-input date-input">
+
+      <input type="time" class="js-time-input time-input">
+      <button onclick="
+        updateList();
+      " class="add-btn">Add</button>
+    </div>
+  <div class="todo-container">
+  <div class="todo-display grid-display"></div>
+</div>
+
+<div class="count-delete">
+  <p class="count">count</p>
+  <button onclick="
+   deleteAll();
+  " class="delete-all-btn">Delete All</button>
+</div>
+  </div>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>

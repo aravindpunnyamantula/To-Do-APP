@@ -1,0 +1,170 @@
+body{
+  background-image: url(images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+.todo-title{
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.to-do-card{
+
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  color: white;
+  width: 600px;
+  height: auto;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.134); 
+  border-radius: 20px; 
+  padding: 20px; 
+  margin-bottom: 10px;
+
+}
+.grid-inputs , .animation{
+  margin-left: 30px;
+  display: grid;
+  grid-template-columns: 200px 100px 100px  100px;
+  column-gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+
+}
+.animation{
+  row-gap: 15px;
+  align-items: stretch;
+  font-size: 16px;
+  text-align: start;
+
+
+}
+
+
+
+.add-btn{
+  background-color: green;
+  color: white;
+  border: none;
+  padding-top: 11px ;
+  padding-bottom: 11px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delete-btn{
+  background-color: red;
+  color: white;
+  border: none;
+  align-items: stretch;
+  padding-top: 11px ;
+  padding-bottom: 11px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.styled-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: -10px;
+  transition: background-color 0.2s ease;
+}
+
+
+.styled-checkbox:checked {
+  background-color: #4caf50; 
+  border-color: #4caf50;
+}
+
+.styled-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.name-input, .date-input, .time-input{
+  border: none;
+  color: black;
+  padding: 7px 5px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.name-display, .date-display, .time-display{
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  font-style: oblique;
+
+}
+.delete-all-btn{
+  margin-left: 280px;
+  width: 80px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.todo-container {
+  max-height: 280px;
+  overflow-y: auto;
+  margin-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-top: 10px;
+}
+
+.todo-container::-webkit-scrollbar {
+  width: 0px;
+}
+.count-delete{
+  display: flex;
+  justify-content: space-between;
+}
+.count{
+  font-weight: bold;
+  font-size: 14px;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+
+
